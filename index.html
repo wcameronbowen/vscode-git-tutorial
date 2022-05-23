@@ -85,7 +85,7 @@ why use Git?
 ---
 class: nord-dark
 
-# Git Flow
+# Git Initial
 <!--
 [![](https://mermaid.ink/img/pako:eNqlkD0OwjAMha9SeS4XyAziAKxZTOI2UUlSGUeAqt6dgKBDW5AQb_LP52fZA5hkCRRURa2XPWPvdKyeMikEL-vZkTEaV0W6bBpCyUwT58h0Kctq74vjNBfQx9kal6Tx1wU5K_9qHohb-uS9BP-7B2ooNiW25dvDA9IgjgJpUCW0yJ0GHcfC5d6i0M56SQyqwdOZasAs6XCLBpRwpje09dgyhhc13gF_FJNx)](https://mermaid-js.github.io/mermaid-live-editor/edit#pako:eNqlkD0OwjAMha9SeS4XyAziAKxZTOI2UUlSGUeAqt6dgKBDW5AQb_LP52fZA5hkCRRURa2XPWPvdKyeMikEL-vZkTEaV0W6bBpCyUwT58h0Kctq74vjNBfQx9kal6Tx1wU5K_9qHohb-uS9BP-7B2ooNiW25dvDA9IgjgJpUCW0yJ0GHcfC5d6i0M56SQyqwdOZasAs6XCLBpRwpje09dgyhhc13gF_FJNx)
 -->
@@ -93,32 +93,120 @@ class: nord-dark
 .mermaid[
 <pre>
   gitGraph
-  commit
-  commit
+  commit id: "4cd2a54"
+  commit id: "52efa01"
+</pre>
+]
+
+1. `main` branch starts
+
+---
+class: nord-dark
+
+# Git Branch
+
+.mermaid[
+<pre>
+  gitGraph
+  commit id: "4cd2a54"
+  commit id: "52efa01" type: HIGHLIGHT
   branch new-feature
   checkout new-feature
-  commit
-  commit
+  commit id: "9ef832a"
+  commit id: "49afe54"
+</pre>
+]
+
+1. `main` branch starts
+2. new feature is started on `new-feature` branch
+
+---
+class: nord-dark
+
+# Git Hotfix
+
+.mermaid[
+<pre>
+  gitGraph
+  commit id: "4cd2a54"
+  commit id: "52efa01"
+  branch new-feature
+  checkout new-feature
+  commit id: "9ef832a"
+  commit id: "49afe54"
   checkout main
   branch hotfix
   checkout hotfix
-  commit
-  commit
-  checkout main
-  merge hotfix
-  checkout main
-  merge new-feature
-  commit
-  commit
-  checkout main
+  commit id: "593df56" type: HIGHLIGHT
 </pre>
 ]
 
 1. `main` branch starts
 2. new feature is started on `new-feature` branch
 3. while working on `new-feature` a bug is discovered
-4. `main` is branched again to `hotfix` which is completed
-5. once `new-feature` is completed it is merged into `main`
+4. `main` is branched again to `hotfix` 
+
+---
+class: nord-dark
+
+# Git Hotfix Merge
+
+.mermaid[
+<pre>
+  gitGraph
+  commit id: "4cd2a54"
+  commit id: "52efa01"
+  branch new-feature
+  checkout new-feature
+  commit id: "9ef832a"
+  commit id: "49afe54"
+  checkout main
+  branch hotfix
+  checkout hotfix
+  commit id: "593df56"
+  checkout main
+  merge hotfix
+</pre>
+]
+
+1. `main` branch starts
+2. new feature is started on `new-feature` branch
+3. while working on `new-feature` a bug is discovered
+4. `main` is branched again to `hotfix`
+5. once `hotfix` is completed it is merged into `main`
+
+---
+class: nord-dark
+
+# Git Feature Merge
+
+.mermaid[
+<pre>
+  gitGraph
+  commit id: "4cd2a54"
+  commit id: "52efa01"
+  branch new-feature
+  checkout new-feature
+  commit id: "9ef832a"
+  commit id: "49afe54"
+  checkout main
+  branch hotfix
+  checkout hotfix
+  commit id: "593df56"
+  checkout main
+  merge hotfix
+  checkout main
+  merge new-feature
+  commit id: "82ga854" type: HIGHLIGHT
+</pre>
+]
+
+1. `main` branch starts
+2. new feature is started on `new-feature` branch
+3. while working on `new-feature` a bug is discovered
+4. `main` is branched again to `hotfix`
+5. once `hotfix` is completed it is merged into `main`
+6. `new-feature` is completed and merged into `main` as well
 
 </textarea>
 
