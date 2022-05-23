@@ -1380,6 +1380,7 @@ and export configuration files for the next import modification.
 
 [mermaid](https://mermaid-js.github.io/mermaid/#/), Generation of diagrams and flowcharts from text in a similar manner as markdown.
 
+#### standard
 .mermaid[
 <pre>
   classDiagram
@@ -1396,6 +1397,37 @@ and export configuration files for the next import modification.
   Class01 : int chimp
   Class01 : int gorilla
   Class08 <--> C2: Cool label
+</pre>
+]
+
+---
+
+## Mermaid Diagrams
+
+[mermaid](https://mermaid-js.github.io/mermaid/#/), Generation of diagrams and flowcharts from text in a similar manner as markdown.
+
+#### git
+.mermaid[
+<pre>
+  gitGraph
+  commit
+  commit
+  branch new-feature
+  checkout new-feature
+  commit
+  commit
+  checkout main
+  branch hotfix
+  checkout hotfix
+  commit
+  commit
+  checkout main
+  merge hotfix
+  checkout main
+  merge new-feature
+  commit
+  commit
+  checkout main
 </pre>
 ]
 
